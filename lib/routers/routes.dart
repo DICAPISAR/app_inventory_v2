@@ -12,13 +12,11 @@ class Routes {
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
 
-    appRoutes.addAll({'home': (BuildContext context) => const LoginScreen()});
+    appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
 
-    /*
-      for (final route in routes) {
-        appRutes.addAll({route.route: (BuildContext context) => route.screen});
-      }
-    */
+    for (final route in routes) {
+      appRoutes.addAll({route.route: (BuildContext context) => route.screen});
+    }
 
     return appRoutes;
   }
