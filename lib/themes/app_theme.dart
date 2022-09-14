@@ -1,3 +1,4 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -63,5 +64,27 @@ class AppTheme {
   static const TextStyle titleScreen = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold,
+  );
+
+  // Tap Homw Screen Style
+  static const TabStyle tabStyle = TabStyle.reactCircle;
+
+  // Option Menu Style
+  static final BoxDecoration optionMenuDecoration = BoxDecoration(
+    color: Colors.grey.shade200,
+    borderRadius: BorderRadius.circular(10),
+    boxShadow: const [
+      BoxShadow(
+        color: Colors.grey,
+        offset: Offset(0, 4),
+        blurRadius: 5,
+      ),
+    ],
+  );
+
+  // Title Option Menu style
+  static const TextStyle titleOptionHomeMenu = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w800,
   );
 }
