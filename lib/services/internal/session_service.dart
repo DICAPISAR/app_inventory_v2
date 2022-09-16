@@ -1,7 +1,9 @@
+import 'dart:convert';
+
 import 'package:app_inventory/services/constans.dart';
 import 'package:app_inventory/services/dto/request/login_request.dart';
 import 'package:app_inventory/services/dto/response/login_response.dart';
-import 'package:app_inventory/services/external/api_call.service.dart';
+import 'package:app_inventory/services/external/api_call_service.dart';
 import 'package:http/http.dart';
 
 class SessionService {
@@ -39,9 +41,14 @@ class SessionService {
       return null;
     }
 
+    ApiService.updateCookie(response);
+
     var decodeResponse = ApiService.decodeResponse(response);
 
-    LoginResponse loginResponse = LoginResponse.fromJson(decodeResponse);
+    Map<String, dynamic> responseParsed =
+        jsonDecode(decodeResponse) as Map<String, dynamic>;
+
+    LoginResponse loginResponse = LoginResponse.fromJson(responseParsed);
 
     return loginResponse;
   }

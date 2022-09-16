@@ -61,7 +61,7 @@ class OptionsMenu extends StatelessWidget {
                 title: 'Tipos de Artículos',
                 pathImage: 'assets/images/type_items.png',
                 singularName: 'Tipo de Articulo',
-                nameNextScreen: 'listTypesItems',
+                nameNextScreen: 'type_items_list',
               )
             ],
           ),

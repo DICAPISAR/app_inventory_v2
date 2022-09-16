@@ -3,6 +3,7 @@ class Constants {
 
   // End Points
   static const String urlLogin = "/app_inventory/login";
+  static const String urlTypeItemList = "/app_inventory/type_item/list";
 
   static Map<String, dynamic> userLoginInfo = {
     "id": 0,
